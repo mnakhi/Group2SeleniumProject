@@ -3,6 +3,9 @@ package home;
 import common.CommonAPI;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
+
+import java.util.List;
 
 public class HomePage extends CommonAPI {
     @FindBy(id = "twotabsearchtextbox")
@@ -33,7 +36,26 @@ public class HomePage extends CommonAPI {
     WebElement findGiftBtn;
     @FindBy(xpath = "//*[@id=\"nav-xshop\"]/a[5]")
     WebElement newReleaseBtn;
-
+    @FindBy(xpath="//*[@id=\"nav-xshop\"]/a[6]")
+    WebElement registryBtn;
+    @FindBy(xpath="//*[@id=\"nav-xshop\"]/a[7]")
+    WebElement giftCardBtn;
+    @FindBy(xpath="//*[@id=\"nav-xshop\"]/a[8]")
+    WebElement sellBtn;
+    @FindBy(xpath="//*[@id=\"nav-xshop\"]/a[9]")
+    WebElement amazonBasicsBtn;
+    @FindBy(xpath="//*[@id=\"nav-xshop\"]/a[10]")
+    WebElement couponBtn;
+    @FindBy(xpath="//*[@id=\"nav-xshop\"]/a[11]")
+    WebElement wholeFoodsBtn;
+    @FindBy(css="select[class='nav-search-dropdown searchSelect']")
+    WebElement allDropdownValue;
+    @FindBy(id="icp-touch-link-country")
+    WebElement countryBtn;
+    @FindBy(id="ap_email")
+    WebElement emailBtn;
+    @FindBy(id="continue")
+    WebElement continueBtn;
     public void navigateToFacebook() {
         driver.get("https://www.amazon.com/");
     }
@@ -89,6 +111,41 @@ public class HomePage extends CommonAPI {
     }
 
     public void useNewReleaseBtn() {
-        findGiftBtn.click();
+        newReleaseBtn.click();
+    }
+
+    public void useRegistryBtn(){
+        registryBtn.click();
+    }
+    public void useGiftCardBtn(){
+        giftCardBtn.click();
+    }
+    public void useSellBtn(){
+        sellBtn.click();
+    }
+    public void useAmazonBasicsBtn(){
+        amazonBasicsBtn.click();
+    }
+    public void useCouponBtn(){
+        couponBtn.click();
+    }
+    public void useWholeFoodsBtn(){
+        wholeFoodsBtn.click();
+    }
+    //failed the method
+    public void dropDown(){
+        List<WebElement> element = getListOfWebElementsByCss(".nav-search-dropdown.searchSelect option");
+        List<String> listOfText = getListOfString(element);
+        List<String> expectedMenu = listOfText;
+        Assert.assertEquals(listOfText,expectedMenu);
+
+    }
+    public void useCountryBtn(){
+        countryBtn.click();
+    }
+    public void s(String name){
+        goToSignIn();
+        emailBtn.sendKeys(name);
+        continueBtn.click();
     }
 }

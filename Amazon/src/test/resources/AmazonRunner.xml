@@ -16,4 +16,9 @@
             <class name="home.HomeTest"/>
         </classes>
     </test>
+    <!--<test name = "Amazon Home">
+        <classes>
+            <class name="home.MoreOnHomeTest"/>
+        </classes>
+    </test>-->
 </suite>

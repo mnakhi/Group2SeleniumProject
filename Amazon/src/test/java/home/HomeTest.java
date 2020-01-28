@@ -82,4 +82,14 @@ public class HomeTest extends CommonAPI {
         HomePage hm = PageFactory.initElements(driver, HomePage.class);
         hm.useNewReleaseBtn();
     }
+    @Test
+    public void testUserCanGoToRegistryPage() {
+        HomePage hm = PageFactory.initElements(driver, HomePage.class);
+        hm.useRegistryBtn();
+    }
+    @Test
+    public void testUserCanGoToSellPage() {
+        HomePage hm = PageFactory.initElements(driver, HomePage.class);
+        hm.useSellBtn();
+    }
 }
