@@ -16,9 +16,14 @@
 <!--            <class name="home.HomeTest"/>-->
 <!--        </classes>-->
 <!--    </test>-->
+<!--    <test name = "Amazon Home">-->
+<!--        <classes>-->
+<!--            <class name="home.SignInTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
     <test name = "Amazon Home">
         <classes>
-            <class name="home.MoreOnHomeTest"/>
+            <class name="home.MoreOnSignInTest"/>
         </classes>
     </test>
 </suite>

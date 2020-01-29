@@ -36,7 +36,7 @@ public class HomeTest extends CommonAPI {
     }
 
     @Test
-    public void testUserCanGoToSignInPage() {
+    public void testUserCanClickOnSignIn() {
         HomePage hm = PageFactory.initElements(driver, HomePage.class);
         hm.goToSignIn();
     }
@@ -91,5 +91,32 @@ public class HomeTest extends CommonAPI {
     public void testUserCanGoToSellPage() {
         HomePage hm = PageFactory.initElements(driver, HomePage.class);
         hm.useSellBtn();
+    }
+    @Test
+    public void testUserCanGoToCareersLink() {
+        HomePage hm = PageFactory.initElements(driver, HomePage.class);
+        hm.clickOnCareer();
+    }
+    @Test
+    public void testUserCanClickOnCountryBtn() {
+        HomePage hm = PageFactory.initElements(driver, HomePage.class);
+        hm.useCountryBtn();
+    }
+    //fail
+    @Test
+    public void testUserCanClickOndropDownMenu() {
+        HomePage hm = PageFactory.initElements(driver, HomePage.class);
+        hm.dropDown();
+    }
+    @Test
+    public void testUserCanGoToCouponPage() {
+        HomePage hm = PageFactory.initElements(driver, HomePage.class);
+        hm.useCouponBtn();
+    }
+
+    @Test
+    public void testUserCanGoToWholeFoodsPage() {
+        HomePage hm = PageFactory.initElements(driver, HomePage.class);
+        hm.useWholeFoodsBtn();
     }
 }

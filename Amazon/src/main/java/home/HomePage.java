@@ -3,7 +3,9 @@ package home;
 import common.CommonAPI;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import java.util.List;
 
@@ -21,7 +23,7 @@ public class HomePage extends CommonAPI {
     @FindBy(id = "nav-link-prime")
     WebElement primeBtn;
     @FindBy(id = "nav-link-accountList")
-    WebElement singInBtn;
+    WebElement signBtn;
     @FindBy(id = "nav-hamburger-menu")
     WebElement hamburgerIcon;
     @FindBy(css = "a[class='nav-a nav-a-2 a-popover-trigger a-declarative']")
@@ -93,7 +95,7 @@ public class HomePage extends CommonAPI {
     }
 
     public void goToSignIn() {
-        singInBtn.click();
+        signBtn.click();
     }
 
     public void hamburgerIconForOptions() {
@@ -150,9 +152,6 @@ public class HomePage extends CommonAPI {
         Assert.assertEquals(listOfText,expectedMenu);
 
     }
-    public void useCountryBtn(){
-        countryBtn.click();
-    }
     public void signIn(String name,String password){
         goToSignIn();
         emailBtn.sendKeys(name);
@@ -160,6 +159,9 @@ public class HomePage extends CommonAPI {
         passwordBtn.sendKeys(password);
         signInBtn.click();
 
+    }
+    public void useCountryBtn(){
+        countryBtn.click();
     }
     public void clickOnCareer(){
         careersLink.click();
@@ -178,7 +180,9 @@ public class HomePage extends CommonAPI {
         continueBtn.click();
 
     }
-    public void personalizedOption(){
-        customizedBtn.click();
+    @Test
+    public void testUserCanGoToSellPage() {
+        HomePage hm = PageFactory.initElements(driver, HomePage.class);
+        hm.useAmazonBasicsBtn();
     }
 }
