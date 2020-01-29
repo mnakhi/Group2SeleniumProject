@@ -2,11 +2,13 @@ package home;
 
 import common.CommonAPI;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import javax.swing.*;
 import java.util.List;
 
 public class HomePage extends CommonAPI {
@@ -68,6 +70,12 @@ public class HomePage extends CommonAPI {
     WebElement forgotBtn;
     @FindBy(xpath = "//*[@id=\"rhf-container\"]/div[2]/span")
     WebElement customizedBtn;
+    @FindBy(xpath = "//*[@id=\"nav-flyout-icp\"]/div[2]/span[1]/span/i")
+    WebElement englishEnBtn;
+    @FindBy(xpath = "//*[@id=\"nav-flyout-icp\"]/div[2]/a[1]/span/i")
+    WebElement espanolBtn;
+    @FindBy(css = "icp-nav-link-inner")
+    WebElement worldIcon;
     public void navigateToFacebook() {
         driver.get("https://www.amazon.com/");
     }
@@ -180,9 +188,19 @@ public class HomePage extends CommonAPI {
         continueBtn.click();
 
     }
-    @Test
-    public void testUserCanGoToSellPage() {
-        HomePage hm = PageFactory.initElements(driver, HomePage.class);
-        hm.useAmazonBasicsBtn();
+    //fail
+    public void chooseLanguage(String language){
+        Actions actions=new Actions(driver);
+        actions.moveToElement(worldIcon).perform();
+        if(language.equalsIgnoreCase("English - EN")) {
+            actions.moveToElement(englishEnBtn).click();
+            actions.click().build().perform();
+        }else if(language.equalsIgnoreCase("Español - ES")){
+            actions.moveToElement(espanolBtn).click();
+            actions.click().build().perform();
+        }else{
+            System.out.println("Not a valid input!!");
+        }
+
     }
 }

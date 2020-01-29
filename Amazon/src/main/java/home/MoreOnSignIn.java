@@ -5,25 +5,55 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
-import java.util.WeakHashMap;
-
 public class MoreOnSignIn extends CommonAPI {
     @FindBy(id = "nav-link-accountList")
     WebElement signInBtn;
+    @FindBy(linkText = "Start here.")
+    WebElement signInLink;
     @FindBy (linkText = "Create a List")
-    WebElement listBtn;
+    WebElement listlink;
     @FindBy (linkText = "Find a Gift")
-    WebElement findGiftBtn;
+    WebElement findGiftlink;
+    @FindBy(linkText = "Explore Idea Lists")
+    WebElement ideaListLink;
+    @FindBy(linkText = "Discover")
+    WebElement discoverLink;
+    @FindBy(linkText = "Your Orders")
+    WebElement ordersLink;
     public void selectCreateAListFromMouseHover() {
         Actions actions = new Actions(driver);
         actions.moveToElement(signInBtn).perform();
-        actions.moveToElement(listBtn).perform();
+        actions.moveToElement(listlink).perform();
         actions.click().build().perform();
     }
     public void selectFindGiftFromMouseHover() {
         Actions actions = new Actions(driver);
         actions.moveToElement(signInBtn).perform();
-        actions.moveToElement(findGiftBtn).perform();
+        actions.moveToElement(findGiftlink).perform();
+        actions.click().build().perform();
+    }
+    public void selectIdeaListFromMouseHover() {
+        Actions actions = new Actions(driver);
+        actions.moveToElement(signInBtn).perform();
+        actions.moveToElement(ideaListLink).perform();
+        actions.click().build().perform();
+    }
+    public void canSignUpFromMouseHover() {
+        Actions actions = new Actions(driver);
+        actions.moveToElement(signInBtn).perform();
+        actions.moveToElement(signInLink).perform();
+        actions.click().build().perform();
+    }
+    public void canDiscoverOptionsFromMouseHover() {
+        Actions actions = new Actions(driver);
+        actions.moveToElement(signInBtn).perform();
+        actions.moveToElement(discoverLink).perform();
+        actions.click().build().perform();
+    }
+    public void cancheckOrderListOptionsFromMouseHover() {
+        Actions actions = new Actions(driver);
+        actions.moveToElement(signInBtn).perform();
+        actions.moveToElement(ordersLink).perform();
         actions.click().build().perform();
     }
 }
