@@ -21,11 +21,11 @@ public class MoreOnHomeTest extends CommonAPI {
 //        hm.useWholeFoodsBtn();
 //    }
 //    //fail
-//    @Test
-//    public void testUserCanClickOndropDownMenu(){
-//        HomePage hm = PageFactory.initElements(driver, HomePage.class);
-//        hm.dropDown();
-//    }
+    @Test
+   public void testUserCanClickOndropDownMenu(){
+       HomePage hm = PageFactory.initElements(driver, HomePage.class);
+        hm.dropDown();
+    }
 //    @Test
 //    public void testUserCanClickOnCountryBtn(){
 //        HomePage hm = PageFactory.initElements(driver, HomePage.class);
@@ -34,6 +34,21 @@ public class MoreOnHomeTest extends CommonAPI {
     @Test
     public void testUserCanClick(){
         HomePage hm = PageFactory.initElements(driver, HomePage.class);
-        hm.s("momenun.akhi@gmail.com");
+        hm.signIn("momenun.akhi@gmail.com","Vabetare~~~08");
+    }
+    @Test
+    public void testUserCanGoToCareersLink(){
+        HomePage hm = PageFactory.initElements(driver, HomePage.class);
+        hm.clickOnCareer();
+    }
+    @Test
+    public void testUserCanClickOnForgotPassword(){
+        HomePage hm = PageFactory.initElements(driver, HomePage.class);
+        hm.forgotToSignIn("momenun.akhi@gmail.com");
+    }
+    @Test
+    public void testUserCanNavigateToForgotPasswordPage(){
+        HomePage hm = PageFactory.initElements(driver, HomePage.class);
+        hm.navigateToForgotSignIn("momenun.akhi@gmail.com");
     }
 }

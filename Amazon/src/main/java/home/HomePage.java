@@ -56,6 +56,15 @@ public class HomePage extends CommonAPI {
     WebElement emailBtn;
     @FindBy(id="continue")
     WebElement continueBtn;
+    @FindBy(linkText = "Careers")
+    WebElement careersLink;
+    @FindBy(css="input[type='password']")
+    WebElement passwordBtn;
+    @FindBy(css="span[class='a-button-inner']")
+    WebElement signInBtn;
+    @FindBy(id="auth-fpp-link-bottom")
+    WebElement forgotBtn;
+
     public void navigateToFacebook() {
         driver.get("https://www.amazon.com/");
     }
@@ -143,9 +152,29 @@ public class HomePage extends CommonAPI {
     public void useCountryBtn(){
         countryBtn.click();
     }
-    public void s(String name){
+    public void signIn(String name,String password){
         goToSignIn();
         emailBtn.sendKeys(name);
         continueBtn.click();
+        passwordBtn.sendKeys(password);
+        signInBtn.click();
+
+    }
+    public void clickOnCareer(){
+        careersLink.click();
+    }
+    public void forgotToSignIn(String name){
+        goToSignIn();
+        emailBtn.sendKeys(name);
+        continueBtn.click();
+        forgotBtn.click();
+    }
+    public void navigateToForgotSignIn(String name){
+        goToSignIn();
+        emailBtn.sendKeys(name);
+        continueBtn.click();
+        forgotBtn.click();
+        continueBtn.click();
+
     }
 }
