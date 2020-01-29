@@ -64,7 +64,8 @@ public class HomePage extends CommonAPI {
     WebElement signInBtn;
     @FindBy(id="auth-fpp-link-bottom")
     WebElement forgotBtn;
-
+    @FindBy(xpath = "//*[@id=\"rhf-container\"]/div[2]/span")
+    WebElement customizedBtn;
     public void navigateToFacebook() {
         driver.get("https://www.amazon.com/");
     }
@@ -176,5 +177,8 @@ public class HomePage extends CommonAPI {
         forgotBtn.click();
         continueBtn.click();
 
+    }
+    public void personalizedOption(){
+        customizedBtn.click();
     }
 }

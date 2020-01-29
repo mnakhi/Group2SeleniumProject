@@ -1,4 +1,4 @@
 # Created by .ignore support plugin (hsz.mobi)
 *.idea/
-*Group2SeleniumProject.iml
+*.iml
 */target/

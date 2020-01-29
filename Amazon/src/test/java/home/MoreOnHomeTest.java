@@ -31,24 +31,29 @@ public class MoreOnHomeTest extends CommonAPI {
 //        HomePage hm = PageFactory.initElements(driver, HomePage.class);
 //        hm.useCountryBtn();
 //    }
+//    @Test
+//    public void testUserCanClick(){
+//        HomePage hm = PageFactory.initElements(driver, HomePage.class);
+//        hm.signIn("momenun.akhi@gmail.com","Vabetare~~~08");
+//    }
+//    @Test
+//    public void testUserCanGoToCareersLink(){
+//        HomePage hm = PageFactory.initElements(driver, HomePage.class);
+//        hm.clickOnCareer();
+//    }
+//    @Test
+//    public void testUserCanClickOnForgotPassword(){
+//        HomePage hm = PageFactory.initElements(driver, HomePage.class);
+//        hm.forgotToSignIn("momenun.akhi@gmail.com");
+//    }
+//    @Test
+//    public void testUserCanNavigateToForgotPasswordPage(){
+//        HomePage hm = PageFactory.initElements(driver, HomePage.class);
+//        hm.navigateToForgotSignIn("momenun.akhi@gmail.com");
+//    }
     @Test
-    public void testUserCanClick(){
+    public void testUserCanGoToCustomizedOption(){
         HomePage hm = PageFactory.initElements(driver, HomePage.class);
-        hm.signIn("momenun.akhi@gmail.com","Vabetare~~~08");
-    }
-    @Test
-    public void testUserCanGoToCareersLink(){
-        HomePage hm = PageFactory.initElements(driver, HomePage.class);
-        hm.clickOnCareer();
-    }
-    @Test
-    public void testUserCanClickOnForgotPassword(){
-        HomePage hm = PageFactory.initElements(driver, HomePage.class);
-        hm.forgotToSignIn("momenun.akhi@gmail.com");
-    }
-    @Test
-    public void testUserCanNavigateToForgotPasswordPage(){
-        HomePage hm = PageFactory.initElements(driver, HomePage.class);
-        hm.navigateToForgotSignIn("momenun.akhi@gmail.com");
+        hm.personalizedOption();
     }
 }
