@@ -11,12 +11,12 @@
     <parameter name="browserVersion" value="75.0"/>
     <parameter name="url" value="https://www.amazon.com/"/>
 
-    <test name = "Amazon Home">
-       <classes>
-           <class name="home.HomeTest"/>
-      </classes>
-    </test>
+<!--    <test name = "Amazon Home">-->
+<!--       <classes>-->
+<!--           <class name="home.HomeTest"/>-->
+<!--      </classes>-->
 <!--    </test>-->
+
 <!--    <test name = "Amazon Home">-->
 <!--        <classes>-->
 <!--            <class name="home.SignInTest"/>-->
@@ -27,4 +27,9 @@
 <!--            <class name="home.MoreOnSignInTest"/>-->
 <!--        </classes>-->
 <!--    </test>-->
+    <test name = "Amazon Home">
+        <classes>
+            <class name="home.HamburgerFunctionsTest"/>
+        </classes>
+    </test>
 </suite>

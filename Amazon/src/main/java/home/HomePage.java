@@ -152,14 +152,6 @@ public class HomePage extends CommonAPI {
     public void useWholeFoodsBtn(){
         wholeFoodsBtn.click();
     }
-    //failed the method
-    public void dropDown(){
-        List<WebElement> element = getListOfWebElementsByCss(".nav-search-dropdown.searchSelect option");
-        List<String> listOfText = getListOfString(element);
-        List<String> expectedMenu = listOfText;
-        Assert.assertEquals(listOfText,expectedMenu);
-
-    }
     public void signIn(String name,String password){
         goToSignIn();
         emailBtn.sendKeys(name);
@@ -186,21 +178,6 @@ public class HomePage extends CommonAPI {
         continueBtn.click();
         forgotBtn.click();
         continueBtn.click();
-
-    }
-    //fail
-    public void chooseLanguage(String language){
-        Actions actions=new Actions(driver);
-        actions.moveToElement(worldIcon).perform();
-        if(language.equalsIgnoreCase("English - EN")) {
-            actions.moveToElement(englishEnBtn).click();
-            actions.click().build().perform();
-        }else if(language.equalsIgnoreCase("Español - ES")){
-            actions.moveToElement(espanolBtn).click();
-            actions.click().build().perform();
-        }else{
-            System.out.println("Not a valid input!!");
-        }
 
     }
 }
