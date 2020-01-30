@@ -3,6 +3,7 @@ package home;
 import common.CommonAPI;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 
 public class HomePage extends CommonAPI {
 
@@ -84,15 +85,75 @@ public class HomePage extends CommonAPI {
         driver.findElement(By.xpath("//label[contains(text(),'Photos')]")).click();
     }
 
-    public void DropDown(){
+    public void DropDown() {
         driver.findElement(By.xpath("//ul[@class='n_search-drop facet_list sortOptions']")).click();
         driver.findElement(By.xpath("//li[@id='newest'] ")).click();
     }
 
-    public void ClearSearcg(){
+    public void ClearSearcg() {
         driver.findElement(By.xpath("//button[@class='cnn-search__clear']")).click();
 
     }
+
+    public void CNNHome() {
+        driver.findElement(By.xpath("//div[@class='Cell-i0zvfi-0 headerstyles__NavBarContent-sc-1vh4dor-4 gcRmuT']" +
+                "//a[@class='Text-sc-1amvtpj-0-a Link-sc-1hkqz5e-0 jlzTwO']")).click();
+
+    }
+
+    public void HeaderTabUSA() {
+        driver.findElement(By.name("us")).click();
+
+    }
+
+    public void HeaderTabWORLD() {
+        driver.findElement(By.name("world")).click();
+
+    }
+
+    public void HeaderTabPolitics() {
+        driver.findElement(By.name("politics")).click();
+    }
+
+    public void HeaderTabOpinoin() {
+        driver.findElement(By.name("opinions")).click();
+    }
+    public void HeaderTabHealth() {
+        driver.findElement(By.name("health")).click();
+    }
+    public void HeaderTabEntertainment(){
+        driver.findElement(By.name("entertainment")).click();
+    }
+    public void HeaderTabStyle(){
+        driver.findElement(By.name("style")).click();
+    }
+    public void HeaderTabTravel(){
+        driver.findElement(By.name("travel")).click();
+    }
+    public void HeaderTabSports(){
+        driver.findElement(By.name("bleacher")).click();
+    }
+    public void HeaderTabVideo(){ driver.findElement(By.name("videos")).click();
+    }
+
+    public void CarouselRight(){
+        driver.findElement(By.className("owl-next")).click();
+        driver.findElement(By.className("owl-next")).click();
+        driver.findElement(By.className("owl-next")).click();
+    }
+
+    public void CarouselLeft(){     //33
+    driver.findElement(By.className("owl-prev"));
+    driver.findElement(By.className("owl-prev"));
+    driver.findElement(By.className("owl-prev"));
+    }
+
+
+
+
+
+
+
 
 
 }
