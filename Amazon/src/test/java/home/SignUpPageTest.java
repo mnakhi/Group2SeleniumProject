@@ -10,4 +10,9 @@ public class SignUpPageTest extends CommonAPI {
         SignUpPage signUp = PageFactory.initElements(driver,SignUpPage.class);
         signUp.canGoToSignUpPage();
     }
+    @Test
+    public void testUserCanCreateNewrAmazonAccount(){
+        SignUpPage signUp = PageFactory.initElements(driver,SignUpPage.class);
+        signUp.createAccount("John Doe","john11doe200@yahoo.com","Abc78910");
+    }
 }

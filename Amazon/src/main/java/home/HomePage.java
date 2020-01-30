@@ -76,6 +76,8 @@ public class HomePage extends CommonAPI {
     WebElement espanolBtn;
     @FindBy(css = "icp-nav-link-inner")
     WebElement worldIcon;
+    @FindBy(css = "span[class=\'navFooterBackToTopText\']")
+    WebElement backToTopBtn;
     public void navigateToFacebook() {
         driver.get("https://www.amazon.com/");
     }
@@ -179,5 +181,8 @@ public class HomePage extends CommonAPI {
         forgotBtn.click();
         continueBtn.click();
 
+    }
+    public void backToTopNavigation(){
+        backToTopBtn.click();
     }
 }

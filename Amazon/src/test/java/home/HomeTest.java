@@ -58,13 +58,13 @@ public class HomeTest extends CommonAPI {
         HomePage hm = PageFactory.initElements(driver, HomePage.class);
         hm.useTodaysDealBtn();
     }
-//
-//    @Test
-//    public void testUserCanGoToBestSellersPage() {
-//        HomePage hm = PageFactory.initElements(driver, HomePage.class);
-//        hm.useBestSellersBtn();
-//    }
-//
+
+    @Test
+    public void testUserCanGoToBestSellersPage() {
+        HomePage hm = PageFactory.initElements(driver, HomePage.class);
+        hm.useBestSellersBtn();
+    }
+
     @Test
     public void testUserCanGoToCustomerServicePage() {
         HomePage hm = PageFactory.initElements(driver, HomePage.class);
@@ -112,6 +112,11 @@ public class HomeTest extends CommonAPI {
     public void testUserCanGoToWholeFoodsPage() {
         HomePage hm = PageFactory.initElements(driver, HomePage.class);
         hm.useWholeFoodsBtn();
+    }
+    @Test
+    public void testUserCanGoBackToTopOfHomePage() {
+        HomePage hm = PageFactory.initElements(driver, HomePage.class);
+        hm.backToTopNavigation();
     }
 
 }
