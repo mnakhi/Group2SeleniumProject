@@ -27,9 +27,14 @@
 <!--            <class name="home.MoreOnSignInTest"/>-->
 <!--        </classes>-->
 <!--    </test>-->
+<!--    <test name = "Amazon Home">-->
+<!--        <classes>-->
+<!--            <class name="home.HamburgerFunctionsTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
     <test name = "Amazon Home">
         <classes>
-            <class name="home.HamburgerFunctionsTest"/>
+            <class name="home.SignUpPageTest"/>
         </classes>
     </test>
 </suite>

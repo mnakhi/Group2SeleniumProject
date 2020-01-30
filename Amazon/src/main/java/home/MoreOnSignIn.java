@@ -68,12 +68,6 @@ public class MoreOnSignIn extends CommonAPI {
         actions.moveToElement(ideaListLink).perform();
         actions.click().build().perform();
     }
-    public void canSignUpFromMouseHover() {
-        Actions actions = new Actions(driver);
-        actions.moveToElement(signInBtn).perform();
-        actions.moveToElement(signInLink).perform();
-        actions.click().build().perform();
-    }
     public void canDiscoverOptionsFromMouseHover() {
         Actions actions = new Actions(driver);
         actions.moveToElement(signInBtn).perform();

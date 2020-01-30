@@ -20,11 +20,7 @@ public class MoreOnSignInTest extends CommonAPI {
         MoreOnSignIn hm = PageFactory.initElements(driver,MoreOnSignIn.class);
         hm.selectIdeaListFromMouseHover();
     }
-    @Test
-    public void testUserCanUseDropdownToGoToSignUpPage() throws Exception {
-        MoreOnSignIn hm = PageFactory.initElements(driver,MoreOnSignIn.class);
-        hm.canSignUpFromMouseHover();
-    }
+
     @Test
     public void testUserCanUseDropdownToGoToDiscoverPage() throws Exception {
         MoreOnSignIn hm = PageFactory.initElements(driver,MoreOnSignIn.class);

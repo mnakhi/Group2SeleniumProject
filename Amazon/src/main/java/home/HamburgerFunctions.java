@@ -9,8 +9,18 @@ public class HamburgerFunctions extends CommonAPI {
     WebElement hamburgerIcon;
     @FindBy(xpath="//*[@id=\"hmenu-content\"]/ul[34]/li[2]/a")
     WebElement primeBtn;
-    public void c(){
+    @FindBy(xpath="//*[@id=\"hmenu-content\"]/ul[34]/li[4]/a")
+    WebElement echoNAlexaBtn;
+    @FindBy(xpath="//*[@id=\"hmenu-content\"]/ul[1]/li[1]/a")
+    WebElement mainMenuBtn;
+    public void primeVideoOption()  {
         hamburgerIcon.click();
         primeBtn.click();
+        mainMenuBtn.click();
+    }
+    public void EchoOption()  {
+        hamburgerIcon.click();
+        echoNAlexaBtn.click();
+        mainMenuBtn.click();
     }
 }
