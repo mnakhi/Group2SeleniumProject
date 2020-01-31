@@ -73,7 +73,7 @@ public class HomePage extends CommonAPI {
         driver.findElement(By.xpath("//label[contains(text(),'All CNN')]")).click();
     }
 
-    public void Storiestab() {
+    public void StoriesTab() {
         driver.findElement(By.xpath("//label[contains(text(),'Stories')]")).click();
     }
 
@@ -90,7 +90,7 @@ public class HomePage extends CommonAPI {
         driver.findElement(By.xpath("//li[@id='newest'] ")).click();
     }
 
-    public void ClearSearcg() {
+    public void ClearSearch() {
         driver.findElement(By.xpath("//button[@class='cnn-search__clear']")).click();
 
     }
@@ -115,7 +115,7 @@ public class HomePage extends CommonAPI {
         driver.findElement(By.name("politics")).click();
     }
 
-    public void HeaderTabOpinoin() {
+    public void HeaderTabOpinion() {
         driver.findElement(By.name("opinions")).click();
     }
 
@@ -143,7 +143,7 @@ public class HomePage extends CommonAPI {
         driver.findElement(By.name("videos")).click();
     }
 
-    public void VideosDigitalStudioHeaderTab() {
+    public void Videos_DigitalStudioHeaderTab() {
         driver.findElement(By.name("digital-studios")).click();
     }
 
@@ -159,35 +159,35 @@ public class HomePage extends CommonAPI {
         driver.findElement(By.className("owl-prev")).click();
     }
 
-    public void VideosDigitalShortsTab() {
+    public void Videos_DigitalShortsTab() {
         driver.findElement(By.name("digital-shorts")).click();
     }
 
-    public void VideosHLNTab() {
+    public void Videos_HLNTab() {
         driver.findElement(By.name("hln")).click();
     }
 
-    public void VideosTvSchdTab() {
+    public void Videos_TVScheduleTab() {
         driver.findElement(By.name("tv-schedule")).click();
     }
 
-    public void TVschdhu_AfternoonTab() {
+    public void TVSchedule_AfternoonTab() {
         driver.findElement(By.xpath("//li[contains(text(),'Afternoon')]")).click();
     }
 
-    public void TVscdhu_EveningTab() {
+    public void TVSchedule_EveningTab() {
         driver.findElement(By.xpath("//li[contains(text(),'Evening')]")).click();
     }
 
-    public void TVscdhu_OvernightTab() {
+    public void TVSchedule_OvernightTab() {
         driver.findElement(By.xpath("//li[contains(text(),'Overnight')]")).click();
     }
 
-    public void TVscdhu_MorningTab() {
+    public void TVSchedule_MorningTab() {
         driver.findElement(By.xpath("//li[contains(text(),'Morning')]")).click();
     }
 
-    public void TVSchduleDropDrown() {
+    public void TVScheduleDropDrown() {
         driver.findElement(By.xpath("//div[@class='js-tv-schedule-header__section--select tv_schedule_header__section--" +
                 "select js-tv-schedule-day-drop-down el-drop-down el-drop-down--dark pg-tv-schedule-header__section--picker']")).click();
     }
