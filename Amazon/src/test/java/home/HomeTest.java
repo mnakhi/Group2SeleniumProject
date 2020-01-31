@@ -94,11 +94,7 @@ public class HomeTest extends CommonAPI {
         HomePage hm = PageFactory.initElements(driver, HomePage.class);
         hm.useSellBtn();
     }
-    @Test
-    public void testUserCanGoToCareersLink() {
-        HomePage hm = PageFactory.initElements(driver, HomePage.class);
-        hm.clickOnCareer();
-    }
+
     @Test
     public void testUserCanClickOnCountryBtn() {
         HomePage hm = PageFactory.initElements(driver, HomePage.class);
@@ -120,11 +116,7 @@ public class HomeTest extends CommonAPI {
         HomePage hm = PageFactory.initElements(driver, HomePage.class);
         hm.backToTopNavigation();
     }
-    @Test
-    public void testUserCanGoToBlogPage(){
-        HomePage hm = PageFactory.initElements(driver,HomePage.class);
-        hm.canClickOnBlogLink();
-    }
+
     @Test
     public void testUserCanGoToAboutAmazonPage(){
         HomePage hm = PageFactory.initElements(driver,HomePage.class);

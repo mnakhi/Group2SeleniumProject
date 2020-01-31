@@ -33,8 +33,17 @@
 <!--        </classes>-->
 <!--    </test>-->
 
+<!--        <classes>-->
+<!--            <class name="home.SignUpPageTest"/>-->
+<!--        </classes>-->
+<!--        <classes>-->
+<!--            <class name="home.HomePageOptionsTest"/>-->
+<!--        </classes>-->
+<!--        <classes>-->
+<!--            <class name="home.PaymentProductOptionsTest"/>-->
+<!--        </classes>-->
         <classes>
-            <class name="home.SignUpPageTest"/>
+            <class name="home.HelpOptionsTest"/>
         </classes>
     </test>
 </suite>

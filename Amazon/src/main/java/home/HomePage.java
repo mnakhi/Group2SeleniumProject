@@ -53,8 +53,6 @@ public class HomePage extends CommonAPI {
     WebElement emailBtn;
     @FindBy(id="continue")
     WebElement continueBtn;
-    @FindBy(linkText = "Careers")
-    WebElement careersLink;
     @FindBy(css="input[type='password']")
     WebElement passwordBtn;
     @FindBy(css="span[class='a-button-inner']")
@@ -71,8 +69,7 @@ public class HomePage extends CommonAPI {
     WebElement worldIcon;
     @FindBy(css = "span[class=\'navFooterBackToTopText\']")
     WebElement backToTopBtn;
-    @FindBy(linkText = "Blog")
-    WebElement blogLink;
+
     @FindBy(linkText = "About Amazon")
     WebElement aboutAmazonLink;
     public void navigateToAmazon() {
@@ -162,9 +159,7 @@ public class HomePage extends CommonAPI {
     public void useCountryBtn(){
         countryBtn.click();
     }
-    public void clickOnCareer(){
-        careersLink.click();
-    }
+
     public void forgotToSignIn(String name){
         goToSignIn();
         emailBtn.sendKeys(name);
@@ -182,9 +177,7 @@ public class HomePage extends CommonAPI {
     public void backToTopNavigation(){
         backToTopBtn.click();
     }
-    public void canClickOnBlogLink(){
-        blogLink.click();
-    }
+
     public void canClickOnAboutAmazon(){
         aboutAmazonLink.click();
     }
