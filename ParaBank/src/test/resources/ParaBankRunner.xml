@@ -13,7 +13,8 @@
 
     <test name = "ParaBank Home">
         <classes>
-            <class name="home.HomeTest"/>
+<!--            <class name="home.HomeTest"/>-->
+            <class name="home.SignUpTest"/>
         </classes>
     </test>
 </suite>

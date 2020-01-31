@@ -31,4 +31,5 @@ public class HomeTest extends CommonAPI {
         HomePage homePage= PageFactory.initElements(driver, HomePage.class);
         homePage.clickOnLocations();
     }
+
 }
