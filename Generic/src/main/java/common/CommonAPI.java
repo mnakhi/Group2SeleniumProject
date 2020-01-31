@@ -37,7 +37,7 @@ public class CommonAPI {
     @BeforeMethod
     public void setUp(@Optional("false") boolean useCloudEnv, @Optional("false")String cloudEnvName,
                       @Optional("OS X") String os, @Optional("10") String os_version, @Optional("chrome-options") String browserName, @Optional("34")
-                              String browserVersion, @Optional("http://www.amazon.com") String url)throws IOException {
+                              String browserVersion, @Optional("http://www.amazon.com") String url) throws IOException {
         //System.setProperty("webdriver.chrome.driver", "/Users/peoplentech/eclipse-workspace-March2018/SeleniumProject1/driver/chromedriver");
         if(useCloudEnv==true){
             if(cloudEnvName.equalsIgnoreCase("browserstack")) {
@@ -56,7 +56,7 @@ public class CommonAPI {
     public WebDriver getLocalDriver(@Optional("mac") String OS, String browserName){
         if(browserName.equalsIgnoreCase("chrome")){
             if(OS.equalsIgnoreCase("OS X")){
-                System.setProperty("webdriver.chrome.driver", "../Generic/src/main/java/driver/chromedriver");
+                System.setProperty("webdriver.chrome.driver", "../Generic/src/main/java/driver/chromedriver"); //
             }else if(OS.equalsIgnoreCase("Windows")){
                 System.setProperty("webdriver.chrome.driver", "..\\Generic\\src\\main\\java\\driver\\chromedriver.exe");
             }
@@ -85,7 +85,6 @@ public class CommonAPI {
             driver = new InternetExplorerDriver();
         }
         return driver;
-
     }
 
 
@@ -411,7 +410,7 @@ public class CommonAPI {
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
-    public void waitUntilSelectable(By locator) {
+    public void waitUntilSelectable() {
         WebDriverWait wait = new WebDriverWait(driver, 10);
         boolean element = wait.until(ExpectedConditions.elementToBeSelected(locator));
     }

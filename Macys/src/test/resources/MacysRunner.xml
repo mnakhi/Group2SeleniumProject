@@ -5,15 +5,15 @@
 
     <parameter name="useCloudEnv" value="false"/>
     <parameter name="cloudEnvName" value="browserstack"/>
-    <parameter name="os" value="Windows"/>
-    <parameter name="os_version" value="10"/>
+    <parameter name="os" value="OS X"/>
+    <parameter name="os_version" value="Catalina"/>
     <parameter name="browserName" value="chrome"/>
     <parameter name="browserVersion" value="75.0"/>
     <parameter name="url" value="https://www.macys.com/"/>
 
     <test name = "Macys Home">
         <classes>
-            <class name="home.HomeTest"/>
+            <class name="home.HomePageTest"/>
         </classes>
     </test>
 </suite>
