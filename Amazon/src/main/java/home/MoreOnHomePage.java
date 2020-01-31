@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
-public class MoreOnSignIn extends CommonAPI {
+public class MoreOnHomePage extends CommonAPI {
     @FindBy(id = "nav-link-accountList")
     WebElement signInBtn;
     @FindBy(linkText = "Start here.")
@@ -50,6 +50,7 @@ public class MoreOnSignIn extends CommonAPI {
     WebElement primeVideoBtn;
     @FindBy(linkText = "Your Watchlist")
     WebElement watchListBtn;
+
     public void selectCreateAListFromMouseHover() {
         Actions actions = new Actions(driver);
         actions.moveToElement(signInBtn).perform();
@@ -170,4 +171,5 @@ public class MoreOnSignIn extends CommonAPI {
         actions.moveToElement(watchListBtn).perform();
         actions.click().build().perform();
     }
+
 }

@@ -2,14 +2,7 @@ package home;
 
 import common.CommonAPI;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
-import org.testng.annotations.Test;
-
-import javax.swing.*;
-import java.util.List;
 
 public class HomePage extends CommonAPI {
     @FindBy(id = "twotabsearchtextbox")
@@ -78,7 +71,11 @@ public class HomePage extends CommonAPI {
     WebElement worldIcon;
     @FindBy(css = "span[class=\'navFooterBackToTopText\']")
     WebElement backToTopBtn;
-    public void navigateToFacebook() {
+    @FindBy(linkText = "Blog")
+    WebElement blogLink;
+    @FindBy(linkText = "About Amazon")
+    WebElement aboutAmazonLink;
+    public void navigateToAmazon() {
         driver.get("https://www.amazon.com/");
     }
 
@@ -87,7 +84,7 @@ public class HomePage extends CommonAPI {
     }
 
     public void searchNClick(String itemName) {
-        this.navigateToFacebook();
+        this.navigateToAmazon();
         searchBox.sendKeys("name");
         submitBtn.click();
     }
@@ -184,5 +181,11 @@ public class HomePage extends CommonAPI {
     }
     public void backToTopNavigation(){
         backToTopBtn.click();
+    }
+    public void canClickOnBlogLink(){
+        blogLink.click();
+    }
+    public void canClickOnAboutAmazon(){
+        aboutAmazonLink.click();
     }
 }

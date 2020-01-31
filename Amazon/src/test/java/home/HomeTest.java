@@ -2,7 +2,9 @@ package home;
 
 import common.CommonAPI;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+
 
 public class HomeTest extends CommonAPI {
     @Test
@@ -117,6 +119,16 @@ public class HomeTest extends CommonAPI {
     public void testUserCanGoBackToTopOfHomePage() {
         HomePage hm = PageFactory.initElements(driver, HomePage.class);
         hm.backToTopNavigation();
+    }
+    @Test
+    public void testUserCanGoToBlogPage(){
+        HomePage hm = PageFactory.initElements(driver,HomePage.class);
+        hm.canClickOnBlogLink();
+    }
+    @Test
+    public void testUserCanGoToAboutAmazonPage(){
+        HomePage hm = PageFactory.initElements(driver,HomePage.class);
+        hm.canClickOnAboutAmazon();
     }
 
 }
