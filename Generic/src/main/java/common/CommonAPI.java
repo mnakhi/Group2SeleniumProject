@@ -56,7 +56,7 @@ public class CommonAPI {
     public WebDriver getLocalDriver(@Optional("mac") String OS, String browserName){
         if(browserName.equalsIgnoreCase("chrome")){
             if(OS.equalsIgnoreCase("OS X")){
-                System.setProperty("webdriver.chrome.driver", "..\\Generic\\src\\main\\java\\driver\\chromedriver");
+                System.setProperty("webdriver.chrome.driver", "../Generic/src/main/java/driver/chromedriver");
             }else if(OS.equalsIgnoreCase("Windows")){
                 System.setProperty("webdriver.chrome.driver", "..\\Generic\\src\\main\\java\\driver\\chromedriver.exe");
             }
@@ -65,7 +65,7 @@ public class CommonAPI {
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--disable-notifications");
             if(OS.equalsIgnoreCase("OS X")){
-                System.setProperty("webdriver.chrome.driver", "..\\Generic\\src\\main\\java\\driver\\chromedriver");
+                System.setProperty("webdriver.chrome.driver", "../Generic/src/main/java/driver/chromedriver");
             }else if(OS.equalsIgnoreCase("Windows")){
                 System.setProperty("webdriver.chrome.driver", "..\\Generic\\src\\main\\java\\driver\\chromedriver.exe");
             }
@@ -74,7 +74,7 @@ public class CommonAPI {
 
         else if(browserName.equalsIgnoreCase("firefox")){
             if(OS.equalsIgnoreCase("OS X")){
-                System.setProperty("webdriver.gecko.driver", "..\\Generic\\src\\main\\java\\driver\\geckodriver");
+                System.setProperty("webdriver.gecko.driver", "../Generic/src/main/java/driver/geckodriver");
             }else if(OS.equalsIgnoreCase("Windows")) {
                 System.setProperty("webdriver.gecko.driver", "..\\Generic\\src\\main\\java\\driver\\geckodriver.exe");
             }
