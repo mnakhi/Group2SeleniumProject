@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
-
+//write methods
 public class HomePage extends CommonAPI {
     @FindBy(id = "globalSearchInputField")
     WebElement searchBox;
@@ -22,22 +22,21 @@ public class HomePage extends CommonAPI {
 
     public void searchNClick(String itemName) {
         this.navigateToMacys();
-        searchBox.sendKeys("boots");
+        searchBox.sendKeys("Boots");
         searchSubmitBtn.click();
-        }
-
+    }
 
     public void clickingOnDropdown() {
-        driver.findElement(By.id("shopByDepartmentDropdown")).click();
+        shopByDepartment.click();
     }
-}
 
 
+    public void clickingOnSpecificDepartment(String department) {
+        driver.findElement(By.id("shopByDepartmentDropdown")).click();
+        driver.findElement(By.linkText(department)).click();
+    }
 
-//        public void clickingOnSpecificDepartment(String department){
-//            driver.findElement(By.id("shopByDepartmentDropdown")).click();
-//            driver.findElement(By.linkText(department)).click();
-//        }
+
 //        public void clickingOnTopNavBarItem(String navInfo){
 //            driver.findElement(By.linkText(navInfo));
 //        }
@@ -58,13 +57,7 @@ public class HomePage extends CommonAPI {
 //    }
 
 
-
-
-//    //write methods
-//    @FindBy(id = "nav-link-accountList")
-//    WebElement signInBtn;
-//    @FindBy(linkText = "Start here.")
-//    WebElement signInLink;
+//
 //    @FindBy (linkText = "Create a List")
 //    WebElement listlink;
 //    @FindBy (linkText = "Find a Gift")
@@ -75,7 +68,7 @@ public class HomePage extends CommonAPI {
 //    WebElement discoverLink;
 //    @FindBy(linkText = "Your Orders")
 //    WebElement ordersLink;
-//
+
 //
 //    public void selectCreateAListFromMouseHover() {
 //        Actions actions = new Actions(driver);
@@ -122,4 +115,4 @@ public class HomePage extends CommonAPI {
 //
 //    public void navigateToForgotSignIn(String s) {
 //    }
-//}
+}
