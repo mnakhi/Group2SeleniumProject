@@ -6,7 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 public class HomeTest extends CommonAPI {
-        @Test
+            @Test
     public void testUserCanLogInToFacebook() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         homePage.logInFacebook("fakeid123auto@gmail.com", "testautomation");
@@ -41,8 +41,6 @@ public class HomeTest extends CommonAPI {
         homePage.logInFacebook("fakeid123auto@gmail.com", "testautomation");
         homePage.clickOnCreateTab();
     }
-
-    //
 //    @Test
 //    public void testUsergetItemsOfCreateTab () throws InterruptedException{
 //        HomePage homePage = PageFactory.initElements(driver, HomePage.class);
@@ -162,11 +160,52 @@ public class HomeTest extends CommonAPI {
         homePage.canGetReportProblemsCancelBtn();
     }
     @Test
-    public void InMessangerOptionHasCreateNewGroup(){
+    public void InMessangerOptionHasCreateNewGroupTab(){
          HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         homePage.logInFacebook("fakeid123auto@gmail.com", "testautomation");
         homePage.getMessageUsingMessenger();
          homePage.createNewGroupForMessaging();
     }
+  @Test
+  public void testUserCancanSearchForPeopleToAdd(){
+    HomePage homePage = PageFactory.initElements(driver, HomePage.class);
+    homePage.logInFacebook("fakeid123auto@gmail.com", "testautomation");
+    homePage.getMessageUsingMessenger();
+    homePage.createNewGroupForMessaging();
+    homePage.canSearchForPeopleToAdd("Jaman");
+}
+    @Test
+    public void testUserCanSeeSelected() {
+        HomePage homePage = PageFactory.initElements(driver, HomePage.class);
+        homePage.logInFacebook("fakeid123auto@gmail.com", "testautomation");
+        homePage.getMessageUsingMessenger();
+        homePage.createNewGroupForMessaging();
+        homePage.canSearchForPeopleToAdd("Jaman");
+        homePage.ItShowsSelected();
+    }
 
+    @Test
+    public void testUserDontWantToAddPeopleInTheGroup() {
+        HomePage homePage = PageFactory.initElements(driver, HomePage.class);
+        homePage.logInFacebook("fakeid123auto@gmail.com", "testautomation");
+        homePage.getMessageUsingMessenger();
+        homePage.createNewGroupForMessaging();
+        homePage.canSearchForPeopleToAdd("Jaman");
+        homePage.ItShowsSelected();
+        homePage.IfYouDontWantToAddPeopleInTheGroup();
+    }
+
+    @Test
+    public void testUserCanUseDropDownIcon() {
+        HomePage homePage = PageFactory.initElements(driver, HomePage.class);
+        homePage.logInFacebook("fakeid123auto@gmail.com", "testautomation");
+        homePage.clickOnDropDownIcon();
+    }
+// @Test
+// public void testUserCanFindGroups() {
+//     HomePage homePage = PageFactory.initElements(driver, HomePage.class);
+//     homePage.logInFacebook("fakeid123auto@gmail.com", "testautomation");
+//     homePage.clickOnDropDownIcon();
+//     homePage.youCanadvertisingOnFb();
+//}
 }
