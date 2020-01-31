@@ -15,6 +15,11 @@ public class HomePage extends CommonAPI {
     WebElement locationsBtn;
     @FindBy(xpath = "//*[@id=\"headerPanel\"]/ul[1]/li[6]/a")
     WebElement adminBtn;
+    @FindBy(linkText = "Home")
+    WebElement homeLink;
+    @FindBy(linkText = "About Us")
+    WebElement aboutUsLink;
+
     public void navigateToAmazon() {
         driver.get("https://parabank.parasoft.com/parabank/index.htm");
     }
