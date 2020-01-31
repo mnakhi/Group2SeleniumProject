@@ -84,8 +84,20 @@ public class HomePage extends CommonAPI {
     @FindBy(xpath = "/html/body/div[1]/div[2]/div/div[1]/div/div/div/div[2]/div[2]/div[2]/div/div/div[2]/div/div[1]/div/div/a")
     WebElement createNewGroup;
 
-    @FindBy(xpath = "/html/body/div[38]/div[2]/div/div/div/div/div[2]/div[1]/div[2]/label/input")
-    WebElement giveNameYourGroup;
+    @FindBy(css = "label[tabindex='-1']")
+    WebElement searchForPeopleToAddTab;
+
+    @FindBy(css="div[class='_2elw _2ph- clearfix']")
+    WebElement selectedTab;
+
+    @FindBy(css="a[action='cancel']")
+    WebElement clickOnCancelBtn;
+
+    @FindBy(xpath = "/html/body/div[1]/div[2]/div/div[1]/div/div/div/div[2]/div[3]/div[2]/div/div/a/div")
+    WebElement dropDownIcon;
+
+//    @FindBy()
+//     WebElement advertisingOnFbTab;
 
     public void navigateToFacebook() {
         driver.get("https://facebook.com");
@@ -184,7 +196,19 @@ public class HomePage extends CommonAPI {
 //        clickOnMessengerIcon.click();
         createNewGroup.click();
     }
-//    public void canGiveNameInYourGroup(String name){
-//        giveNameYourGroup.sendKeys(name);
-//    }
+    public void canSearchForPeopleToAdd(String name){
+        searchForPeopleToAddTab.sendKeys(name);
+    }
+    public void ItShowsSelected(){
+        selectedTab.click();
+    }
+  public void IfYouDontWantToAddPeopleInTheGroup(){
+      clickOnCancelBtn.click();
+  }
+ public void clickOnDropDownIcon(){
+     dropDownIcon.click();
+ }
+// public void youCanadvertisingOnFb(){
+//     advertisingOnFbTab.click();
+// }
 }
