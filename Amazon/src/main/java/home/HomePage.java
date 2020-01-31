@@ -2,14 +2,7 @@ package home;
 
 import common.CommonAPI;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
-import org.testng.annotations.Test;
-
-import javax.swing.*;
-import java.util.List;
 
 public class HomePage extends CommonAPI {
     @FindBy(id = "twotabsearchtextbox")
@@ -60,8 +53,6 @@ public class HomePage extends CommonAPI {
     WebElement emailBtn;
     @FindBy(id="continue")
     WebElement continueBtn;
-    @FindBy(linkText = "Careers")
-    WebElement careersLink;
     @FindBy(css="input[type='password']")
     WebElement passwordBtn;
     @FindBy(css="span[class='a-button-inner']")
@@ -76,7 +67,12 @@ public class HomePage extends CommonAPI {
     WebElement espanolBtn;
     @FindBy(css = "icp-nav-link-inner")
     WebElement worldIcon;
-    public void navigateToFacebook() {
+    @FindBy(css = "span[class=\'navFooterBackToTopText\']")
+    WebElement backToTopBtn;
+
+    @FindBy(linkText = "About Amazon")
+    WebElement aboutAmazonLink;
+    public void navigateToAmazon() {
         driver.get("https://www.amazon.com/");
     }
 
@@ -85,7 +81,7 @@ public class HomePage extends CommonAPI {
     }
 
     public void searchNClick(String itemName) {
-        this.navigateToFacebook();
+        this.navigateToAmazon();
         searchBox.sendKeys("name");
         submitBtn.click();
     }
@@ -152,14 +148,6 @@ public class HomePage extends CommonAPI {
     public void useWholeFoodsBtn(){
         wholeFoodsBtn.click();
     }
-    //failed the method
-    public void dropDown(){
-        List<WebElement> element = getListOfWebElementsByCss(".nav-search-dropdown.searchSelect option");
-        List<String> listOfText = getListOfString(element);
-        List<String> expectedMenu = listOfText;
-        Assert.assertEquals(listOfText,expectedMenu);
-
-    }
     public void signIn(String name,String password){
         goToSignIn();
         emailBtn.sendKeys(name);
@@ -171,9 +159,7 @@ public class HomePage extends CommonAPI {
     public void useCountryBtn(){
         countryBtn.click();
     }
-    public void clickOnCareer(){
-        careersLink.click();
-    }
+
     public void forgotToSignIn(String name){
         goToSignIn();
         emailBtn.sendKeys(name);
@@ -188,19 +174,11 @@ public class HomePage extends CommonAPI {
         continueBtn.click();
 
     }
-    //fail
-    public void chooseLanguage(String language){
-        Actions actions=new Actions(driver);
-        actions.moveToElement(worldIcon).perform();
-        if(language.equalsIgnoreCase("English - EN")) {
-            actions.moveToElement(englishEnBtn).click();
-            actions.click().build().perform();
-        }else if(language.equalsIgnoreCase("Español - ES")){
-            actions.moveToElement(espanolBtn).click();
-            actions.click().build().perform();
-        }else{
-            System.out.println("Not a valid input!!");
-        }
+    public void backToTopNavigation(){
+        backToTopBtn.click();
+    }
 
+    public void canClickOnAboutAmazon(){
+        aboutAmazonLink.click();
     }
 }
