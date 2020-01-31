@@ -31,6 +31,7 @@ public class SignUpPage extends CommonAPI {
     WebElement confirmBox;
     @FindBy(xpath = "//input[@type=\"submit\" and @value=\"Log In\"]")
     WebElement registerBtn;
+
     public void clickOnRegister(){
         registrationLink.click();
     }
@@ -49,4 +50,5 @@ public class SignUpPage extends CommonAPI {
         confirmBox.sendKeys(password);
         registerBtn.click();
     }
+
 }

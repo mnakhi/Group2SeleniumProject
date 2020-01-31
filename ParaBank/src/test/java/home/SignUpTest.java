@@ -15,4 +15,5 @@ public class SignUpTest extends CommonAPI {
         SignUpPage signUpPage= PageFactory.initElements(driver, SignUpPage.class);
         signUpPage.registerForAccount("John","Doe","12-93 fake street","Brooklyn","NY","55555","1111111111","0000000000","JOhn Doe","Can'tRemember");
     }
+
 }
