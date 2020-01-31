@@ -118,43 +118,104 @@ public class HomePage extends CommonAPI {
     public void HeaderTabOpinoin() {
         driver.findElement(By.name("opinions")).click();
     }
+
     public void HeaderTabHealth() {
         driver.findElement(By.name("health")).click();
     }
-    public void HeaderTabEntertainment(){
+
+    public void HeaderTabEntertainment() {
         driver.findElement(By.name("entertainment")).click();
     }
-    public void HeaderTabStyle(){
+
+    public void HeaderTabStyle() {
         driver.findElement(By.name("style")).click();
     }
-    public void HeaderTabTravel(){
+
+    public void HeaderTabTravel() {
         driver.findElement(By.name("travel")).click();
     }
-    public void HeaderTabSports(){
+
+    public void HeaderTabSports() {
         driver.findElement(By.name("bleacher")).click();
     }
-    public void HeaderTabVideo(){ driver.findElement(By.name("videos")).click();
+
+    public void HeaderTabVideo() {
+        driver.findElement(By.name("videos")).click();
     }
 
-    public void CarouselRight(){
+    public void VideosDigitalStudioHeaderTab() {
+        driver.findElement(By.name("digital-studios")).click();
+    }
+
+    public void CarouselRight() {
         driver.findElement(By.className("owl-next")).click();
         driver.findElement(By.className("owl-next")).click();
         driver.findElement(By.className("owl-next")).click();
     }
 
-    public void CarouselLeft(){     //33
-    driver.findElement(By.className("owl-prev"));
-    driver.findElement(By.className("owl-prev"));
-    driver.findElement(By.className("owl-prev"));
+    public void CarouselLeft() {
+        driver.findElement(By.className("owl-prev")).click();
+        driver.findElement(By.className("owl-prev")).click();
+        driver.findElement(By.className("owl-prev")).click();
     }
 
+    public void VideosDigitalShortsTab() {
+        driver.findElement(By.name("digital-shorts")).click();
+    }
 
+    public void VideosHLNTab() {
+        driver.findElement(By.name("hln")).click();
+    }
 
+    public void VideosTvSchdTab() {
+        driver.findElement(By.name("tv-schedule")).click();
+    }
 
+    public void TVschdhu_AfternoonTab() {
+        driver.findElement(By.xpath("//li[contains(text(),'Afternoon')]")).click();
+    }
 
+    public void TVscdhu_EveningTab() {
+        driver.findElement(By.xpath("//li[contains(text(),'Evening')]")).click();
+    }
 
+    public void TVscdhu_OvernightTab() {
+        driver.findElement(By.xpath("//li[contains(text(),'Overnight')]")).click();
+    }
 
+    public void TVscdhu_MorningTab() {
+        driver.findElement(By.xpath("//li[contains(text(),'Morning')]")).click();
+    }
 
+    public void TVSchduleDropDrown() {
+        driver.findElement(By.xpath("//div[@class='js-tv-schedule-header__section--select tv_schedule_header__section--" +
+                "select js-tv-schedule-day-drop-down el-drop-down el-drop-down--dark pg-tv-schedule-header__section--picker']")).click();
+    }
 
+    public void DropdownFriday(){
+        driver.findElement(By.xpath("//li[contains(text(),'Friday, January 31, 2020')]")).click();
+    }
+    public void DropdownSaturday(){
+        driver.findElement( By.xpath("//li[contains(text(),'Saturday, February 01, 2020')]")).click();
+    }
+
+    public void DropDownSunday(){
+        driver.findElement(By.xpath("//li[contains(text(),'Sunday, February 02, 2020')]")).click();
+    }
+    public void DropdownMonday(){
+        driver.findElement(By.xpath("//li[contains(text(),'Monday, February 03, 2020')]")).click();
+    }
+    public void DropdownTuesday(){
+        driver.findElement(By.xpath("//li[contains(text(),'Tuesday, February 04, 2020')]")).click();
+    }
+    public void DropDownWed(){
+        driver.findElement(By.xpath("//li[contains(text(),'Wednesday, February 05, 2020')]")).click();
+    }
+    public void DropdownThurs(){
+        driver.findElement(By.xpath("//li[contains(text(),'Thursday, January 30, 2020')]")).click();
+    }
+
+    public void TvShowsAZTab (){
+        driver.findElement(By.className("all-shows")).click();
 }
 
