@@ -192,30 +192,35 @@ public class HomePage extends CommonAPI {
                 "select js-tv-schedule-day-drop-down el-drop-down el-drop-down--dark pg-tv-schedule-header__section--picker']")).click();
     }
 
-    public void DropdownFriday(){
+    public void DropdownFriday() {
         driver.findElement(By.xpath("//li[contains(text(),'Friday, January 31, 2020')]")).click();
     }
-    public void DropdownSaturday(){
-        driver.findElement( By.xpath("//li[contains(text(),'Saturday, February 01, 2020')]")).click();
+
+    public void DropdownSaturday() {
+        driver.findElement(By.xpath("//li[contains(text(),'Saturday, February 01, 2020')]")).click();
     }
 
-    public void DropDownSunday(){
+    public void DropDownSunday() {
         driver.findElement(By.xpath("//li[contains(text(),'Sunday, February 02, 2020')]")).click();
     }
-    public void DropdownMonday(){
+
+    public void DropdownMonday() {
         driver.findElement(By.xpath("//li[contains(text(),'Monday, February 03, 2020')]")).click();
     }
-    public void DropdownTuesday(){
+
+    public void DropdownTuesday() {
         driver.findElement(By.xpath("//li[contains(text(),'Tuesday, February 04, 2020')]")).click();
     }
-    public void DropDownWed(){
+
+    public void DropDownWed() {
         driver.findElement(By.xpath("//li[contains(text(),'Wednesday, February 05, 2020')]")).click();
     }
-    public void DropdownThurs(){
+
+    public void DropdownThurs() {
         driver.findElement(By.xpath("//li[contains(text(),'Thursday, January 30, 2020')]")).click();
     }
 
-    public void TvShowsAZTab (){
+    public void TvShowsAZTab() {
         driver.findElement(By.className("all-shows")).click();
+    }
 }
-
