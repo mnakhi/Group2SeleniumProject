@@ -42,8 +42,17 @@
 <!--        <classes>-->
 <!--            <class name="home.PaymentProductOptionsTest"/>-->
 <!--        </classes>-->
+<!--        <classes>-->
+<!--            <class name="home.HelpOptionsTest"/>-->
+<!--        </classes>-->
+<!--        <classes>-->
+<!--            <class name="home.PrimeOptionsUseTest"/>-->
+<!--        </classes>-->
+<!--        <classes>-->
+<!--            <class name="home.EchoNAlexaUseTest"/>-->
+<!--        </classes>-->
         <classes>
-            <class name="home.HelpOptionsTest"/>
+            <class name="home.KindleOptionsTest"/>
         </classes>
     </test>
 </suite>
