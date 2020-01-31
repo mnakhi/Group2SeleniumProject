@@ -12,17 +12,19 @@ public class HomePageTest extends CommonAPI {
         HomePage searchPage = PageFactory.initElements(driver, HomePage.class);
         searchPage.searchNClick("");
     }
+    @Test
+    public void testUserAbleToClickOnDropdownMenu() {
+        HomePage shopByDepartment = PageFactory.initElements(driver, HomePage.class);
+        shopByDepartment.searchNClick("Men");
+    }
+
 }
 
 
 
 
 
-//    @Test
-//    public void testUserAbleToClickOnDropdownMenu(){
-//        driver.get("https://www.macys.com/");
-//        HomePage hm =new HomePage();
-//        hm.clickingOnDropdown();
+//
 //    }
 //    @Test
 //    public void testUserAbleToGoToSpecificPagesBySelectingFromDropdownOption(){

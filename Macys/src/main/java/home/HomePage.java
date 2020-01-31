@@ -12,6 +12,9 @@ public class HomePage extends CommonAPI {
     WebElement searchBox;
     @FindBy(id = "searchSubmit")
     WebElement searchSubmitBtn;
+    @FindBy(id = "unselectedMenuButton")
+    WebElement shopByDepartment;
+
 
     public void navigateToMacys() {
         driver.get("https://www.macys.com");
@@ -24,13 +27,13 @@ public class HomePage extends CommonAPI {
         }
 
 
+    public void clickingOnDropdown() {
+        driver.findElement(By.id("shopByDepartmentDropdown")).click();
+    }
 }
 
 
 
-//    public void clickingOnDropdown(){
-//            driver.findElement(By.id("shopByDepartmentDropdown")).click();
-//        }
 //        public void clickingOnSpecificDepartment(String department){
 //            driver.findElement(By.id("shopByDepartmentDropdown")).click();
 //            driver.findElement(By.linkText(department)).click();
