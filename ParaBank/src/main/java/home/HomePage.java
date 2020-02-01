@@ -20,7 +20,7 @@ public class HomePage extends CommonAPI {
     @FindBy(linkText = "About Us")
     WebElement aboutUsLink;
 
-    public void navigateToAmazon() {
+    public void navigateToParaBank() {
         driver.get("https://parabank.parasoft.com/parabank/index.htm");
     }
 

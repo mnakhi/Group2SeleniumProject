@@ -69,7 +69,6 @@ public class HomePage extends CommonAPI {
     WebElement worldIcon;
     @FindBy(css = "span[class=\'navFooterBackToTopText\']")
     WebElement backToTopBtn;
-
     @FindBy(linkText = "About Amazon")
     WebElement aboutAmazonLink;
     public void navigateToAmazon() {
@@ -181,4 +180,5 @@ public class HomePage extends CommonAPI {
     public void canClickOnAboutAmazon(){
         aboutAmazonLink.click();
     }
+
 }

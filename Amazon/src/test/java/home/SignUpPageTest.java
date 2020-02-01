@@ -19,7 +19,7 @@ public class SignUpPageTest extends CommonAPI {
     @Test
     public void testUserCanNavigateToAccountCreationError(){
         SignUpPage signUp = PageFactory.initElements(driver,SignUpPage.class);
-        signUp.createAccountError("John Doe","john11doe200@yahoo.com","Abc78910");
+        signUp.encounterErrorWhileCreatingAccount("John Doe","john11doe200@yahoo.com","Abc78910");
         boolean error=signUp.errorMessage.isDisplayed();
         Assert.assertEquals(error,true);
     }
@@ -36,6 +36,6 @@ public class SignUpPageTest extends CommonAPI {
     @Test
     public void testUserCanCreateAnotherAcc() throws InterruptedException {
         SignUpPage signUp = PageFactory.initElements(driver,SignUpPage.class);
-        signUp.createAccount3("Johnny12","john11doe200@yahoo.com","Xyx&&2263");
+        signUp.doNotCreateSecondAccountWthTheSameEmail("Johnny12","john11doe200@yahoo.com","Xyx&&2263");
     }
 }

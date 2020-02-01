@@ -45,7 +45,7 @@ public class SignUpPage extends CommonAPI {
         reenterPasswordBox.sendKeys(password);
         createAccountBtn.click();
     }
-    public void createAccountError(String name, String email,String password){
+    public void encounterErrorWhileCreatingAccount(String name, String email, String password){
         canGoToSignUpPage();
         userNameBox.sendKeys(name);
         emailBox.sendKeys(email);
@@ -73,7 +73,7 @@ public class SignUpPage extends CommonAPI {
         newAccountLink.click();
 
     }
-    public void createAccount3(String name, String email,String password) throws InterruptedException {
+    public void doNotCreateSecondAccountWthTheSameEmail(String name, String email, String password) throws InterruptedException {
         canGoToSignUpPage();
         userNameBox.sendKeys(name);
         emailBox.sendKeys(email);
