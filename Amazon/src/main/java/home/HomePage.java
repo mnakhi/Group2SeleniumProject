@@ -181,4 +181,5 @@ public class HomePage extends CommonAPI {
     public void canClickOnAboutAmazon(){
         aboutAmazonLink.click();
     }
+
 }
