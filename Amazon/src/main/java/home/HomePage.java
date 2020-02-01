@@ -185,4 +185,5 @@ public class HomePage extends CommonAPI {
         HomePage hm = PageFactory.initElements(driver, HomePage.class);
         hm.useAmazonBasicsBtn();
     }
+
 }
