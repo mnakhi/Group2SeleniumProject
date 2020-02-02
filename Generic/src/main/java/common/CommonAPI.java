@@ -108,6 +108,7 @@ public class CommonAPI {
         }else{
             getLocalDriver(os, browserName);
         }
+        driver.manage().window().fullscreen();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         //driver.manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
         driver.get(url);

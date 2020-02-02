@@ -1,4 +1,4 @@
-package home;
+package hamburgericon;
 
 import common.CommonAPI;
 import org.openqa.selenium.support.PageFactory;

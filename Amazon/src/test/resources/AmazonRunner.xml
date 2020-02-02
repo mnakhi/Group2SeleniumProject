@@ -13,16 +13,17 @@
 
     <test name = "Amazon Home">
        <classes>
-           <class name="home.HomeTest"/>
-           <class name="home.SignInTest"/>
+<!--           <class name="home.HomeTest"/>-->
+<!--           <class name="home.SignInTest"/>-->
+<!--           <class name="home.TestSearch"></class>-->
 <!--           <class name="home.MoreOnHomePageTest"/>-->
 <!--           <class name="home.SignUpPageTest"/>-->
 <!--           <class name="home.HomePageOptionsTest"/>-->
 <!--           <class name="home.PaymentProductOptionsTest"/>-->
 <!--           <class name="home.HelpOptionsTest"/>-->
-<!--           <class name="home.PrimeOptionsUseTest"/>-->
-<!--           <class name="home.EchoNAlexaUseTest"/>-->
-<!--           <class name="home.KindleOptionsTest"/>-->
+<!--           <class name="hamburgericon.PrimeOptionsUseTest"/>-->
+<!--           <class name="hamburgericon.EchoNAlexaUseTest"/>-->
+<!--           <class name="hamburgericon.KindleOptionsTest"/>-->
       </classes>
     </test>
 </suite>

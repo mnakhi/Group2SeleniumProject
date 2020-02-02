@@ -1,6 +1,7 @@
-package home;
+package hamburgericon;
 
 import common.CommonAPI;
+import hamburgericon.PrimeOptionsUse;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
