@@ -1,4 +1,4 @@
-package home;
+package signinsignup;
 
 import common.CommonAPI;
 import org.openqa.selenium.Alert;

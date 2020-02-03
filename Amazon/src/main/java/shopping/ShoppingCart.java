@@ -3,14 +3,39 @@ package shopping;
 import common.CommonAPI;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
 public class ShoppingCart extends CommonAPI {
-    @FindBy(xpath="//*[@id=\"add-to-cart-button\"]")
+    @FindBy(id = "twotabsearchtextbox")
+    WebElement searchBox;
+    @FindBy(css = "input[class='nav-input']")
+    WebElement submitBtn;
+    @FindBy(xpath = "//*[@id=\"nav-xshop\"]/a[1]")
+    WebElement todaysDealBtn;
+    @FindBy(id="101 16563b45-announce")
     WebElement addToCartBtn;
-    public void navaigate(){
-        driver.get("https://www.amazon.com/iPhone-Built-Protector-i-Blason-Glitter/dp/B07K71V19F/ref=sr_1_10?keywords=phone+case&qid=1580619362&sr=8-10");
+    @FindBy(id="nav-cart-count")
+    WebElement cartBtn;
+    public void navigateToAmazon(){
+        driver.get("https://www.amazon.com/");
+    }
+    public void searchNClick(String itemName) {
+        this.navigateToAmazon();
+        searchBox.sendKeys(itemName);
+        submitBtn.click();
+    }
+    public void useTodaysDealBtn() {
+        todaysDealBtn.click();
     }
     public void clickOnToAddItem(){
         addToCartBtn.click();
+    }
+    public void addToCart(){
+        navigateToAmazon();
+        useTodaysDealBtn();
+        addToCartBtn.click();
+        cartBtn.click();
+        String expected2 = "Amazon.com Shopping Cart";
+        Assert.assertEquals(driver.getTitle(),expected2);
     }
 }

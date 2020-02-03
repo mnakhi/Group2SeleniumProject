@@ -1,6 +1,7 @@
-package home;
+package signinsignup;
 
 import common.CommonAPI;
+import home.HomePage;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 

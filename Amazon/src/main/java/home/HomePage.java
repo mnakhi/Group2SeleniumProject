@@ -81,7 +81,7 @@ public class HomePage extends CommonAPI {
 
     public void searchNClick(String itemName) {
         this.navigateToAmazon();
-        searchBox.sendKeys("name");
+        searchBox.sendKeys(itemName);
         submitBtn.click();
     }
 
