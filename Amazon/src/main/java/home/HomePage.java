@@ -3,6 +3,7 @@ package home;
 import common.CommonAPI;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
 public class HomePage extends CommonAPI {
     @FindBy(id = "twotabsearchtextbox")
@@ -27,9 +28,9 @@ public class HomePage extends CommonAPI {
     WebElement todaysDealBtn;
     @FindBy(xpath = "//*[@id=\"nav-xshop\"]/a[2]")
     WebElement bestSellersBtn;
-    @FindBy(xpath = "//*[@id=\"nav-xshop\"]/a[3]")
-    WebElement customerServiceBtn;
     @FindBy(xpath = "//*[@id=\"nav-xshop\"]/a[4]")
+    WebElement customerServiceBtn;
+    @FindBy(xpath = "//*[@id=\"nav-xshop\"]/a[3]")
     WebElement findGiftBtn;
     @FindBy(xpath = "//*[@id=\"nav-xshop\"]/a[5]")
     WebElement newReleaseBtn;

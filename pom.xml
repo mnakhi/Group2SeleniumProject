@@ -16,6 +16,7 @@
         <module>Macys</module>
         <module>Netflix</module>
         <module>ParaBank</module>
+        <module>Chase</module>
     </modules>
 
     <dependencyManagement>
