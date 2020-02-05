@@ -13,4 +13,9 @@ public class TestSearch extends CommonAPI {
         SearchPage searchPage = PageFactory.initElements(driver, SearchPage.class);
         searchPage.searchItemsAndSubmitButton();
     }
+    @Test
+    public void testUeerCanSearchItemAfterItemFromAList(){
+        SearchPage searchPage = PageFactory.initElements(driver,SearchPage.class);
+        searchPage.searchFromList();
+    }
 }

@@ -55,15 +55,24 @@ public class SearchPage {
             clearInputBox();
         }
     }
-    public List<String> getItems(){
+    public static List<String> getItems(){
         List<String> itemsList = new ArrayList<String>();
         itemsList.add("books");
         itemsList.add("iPhone");
         itemsList.add("Honey");
         itemsList.add("car");
+        itemsList.add("earphone");
 
         return itemsList;
 
+    }
+    public void searchFromList(){
+        List<String> list = SearchPage.getItems();
+        for (String s: list) {
+            typeItemName(s);
+            clickOnSearch();
+            clearInputBox();
+        }
     }
 
 }

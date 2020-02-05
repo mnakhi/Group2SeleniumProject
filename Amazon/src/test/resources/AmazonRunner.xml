@@ -26,6 +26,7 @@
 <!--           <class name="hamburgericon.KindleOptionsTest"/>-->
 <!--           <class name="shopping.ShoppingCartTest"/>-->
 <!--           <class name="search.SearchNSelectNBuyTest"/>-->
+<!--           <class name="search.MoreSearchTest"/>-->
       </classes>
     </test>
 </suite>
