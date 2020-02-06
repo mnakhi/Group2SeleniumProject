@@ -171,7 +171,7 @@ public class CommonAPI {
 
     @AfterClass
     public void cleanUp(){
-        driver.close();
+       // driver.quit();
     }
 
     //helper methods
