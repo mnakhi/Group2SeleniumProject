@@ -8,6 +8,11 @@ import org.testng.annotations.Test;
 
 public class HomeTest extends CommonAPI {
     @Test
+    public void testUserCanRefreshAmazonHomePage() {
+        HomePage homePage = PageFactory.initElements(driver, HomePage.class);
+        homePage.refresh();
+    }
+    @Test
     public void testUserCanUseSearchBox() {
         HomePage searchPage = PageFactory.initElements(driver, HomePage.class);
         searchPage.searchNClick("phone");

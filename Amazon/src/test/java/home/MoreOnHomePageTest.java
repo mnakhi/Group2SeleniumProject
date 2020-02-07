@@ -7,6 +7,11 @@ import org.testng.annotations.Test;
 
 public class MoreOnHomePageTest extends CommonAPI {
     @Test
+    public void testUserCanScrollToAnySpecificItem() throws Exception {
+        MoreOnHomePage hm = PageFactory.initElements(driver,MoreOnHomePage.class);
+        hm.scrollByVisibleElement();
+    }
+    @Test
     public void testUserCanUseDropdownToGoToCreateListPage() throws Exception {
         MoreOnHomePage hm = PageFactory.initElements(driver,MoreOnHomePage.class);
         hm.selectCreateAListFromMouseHover();

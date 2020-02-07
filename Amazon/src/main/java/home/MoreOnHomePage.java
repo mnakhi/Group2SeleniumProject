@@ -1,6 +1,7 @@
 package home;
 
 import common.CommonAPI;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -50,6 +51,13 @@ public class MoreOnHomePage extends CommonAPI {
     WebElement primeVideoBtn;
     @FindBy(linkText = "Your Watchlist")
     WebElement watchListBtn;
+    @FindBy(xpath = "//*[@id=\"navFooter\"]/div[4]/table/tbody/tr[9]/td[11]/a")
+    WebElement dealsNShenanigansLink;
+
+    public void scrollByVisibleElement(){
+        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
+        javascriptExecutor.executeScript("arguments[0].scrollIntoView();", dealsNShenanigansLink);
+    }
 
     public void selectCreateAListFromMouseHover() {
         Actions actions = new Actions(driver);

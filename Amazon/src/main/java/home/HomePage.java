@@ -75,6 +75,10 @@ public class HomePage extends CommonAPI {
     public void navigateToAmazon() {
         driver.get("https://www.amazon.com/");
     }
+    public void refresh(){
+        driver.navigate().refresh();
+
+    }
 
     public void clickOnAmazonLogo() {
         amazonLogo.click();
