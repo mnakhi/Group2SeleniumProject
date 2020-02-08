@@ -17,6 +17,8 @@ public class SignIn extends CommonAPI {
     WebElement passwordBtn;
     @FindBy(id="auth-fpp-link-bottom")
     WebElement forgotBtn;
+    @FindBy(css = "h4[class='a-alert-heading']")
+    WebElement errorMessage;
     public void navigateToAmazon() {
         driver.get("https://www.amazon.com/");
     }
@@ -30,6 +32,15 @@ public class SignIn extends CommonAPI {
         passwordBtn.sendKeys(password);
         signInBtn.click();
 
+    }
+    public void signInWithWrongPassword(String name, String password) throws InterruptedException {
+        goToSignIn();
+        emailBtn.sendKeys(name);
+        continueBtn.click();
+        passwordBtn.sendKeys(password);
+        signInBtn.click();
+        errorMessage.getText();
+        Thread.sleep(5000);
     }
     public void forgotToSignIn(String name){
         goToSignIn();

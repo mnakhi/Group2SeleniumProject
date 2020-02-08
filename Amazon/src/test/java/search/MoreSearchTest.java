@@ -15,4 +15,14 @@ public class MoreSearchTest extends CommonAPI {
         MoreSearch moreSearch = PageFactory.initElements(driver, MoreSearch.class);
         moreSearch.selectAudibleOption("Mat");
     }
+    @Test
+    public void testUserCanSelectApplianceOptionsFromDepartmentsDropdownNSearch(){
+        MoreSearch moreSearch = PageFactory.initElements(driver, MoreSearch.class);
+        moreSearch.selectAppliancesOption("blander");
+    }
+    @Test
+    public void testUserCanSelectItemUnderTenDollarsFromDepartmentsDropdownNSearch(){
+        MoreSearch moreSearch = PageFactory.initElements(driver, MoreSearch.class);
+        moreSearch.selectItemUnderTenDollarsOption("phone case");
+    }
 }
