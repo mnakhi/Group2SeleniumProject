@@ -17,6 +17,7 @@
         <module>Netflix</module>
         <module>ParaBank</module>
         <module>Chase</module>
+        <module>RestAssured</module>
     </modules>
 
     <dependencyManagement>

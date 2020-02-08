@@ -3,7 +3,7 @@
 
 <suite name="Group2 Selenium Project " parallel="false">
 
-    <parameter name="useCloudEnv" value="true"/>
+    <parameter name="useCloudEnv" value="false"/>
     <parameter name="cloudEnvName" value="browserstack"/>
     <parameter name="os" value="Windows"/>
     <parameter name="os_version" value="10"/>
@@ -13,20 +13,20 @@
 
     <test name = "Amazon Home">
        <classes>
-<!--           <class name="home.HomeTest"/>-->
-<!--           <class name="home.TestSearch"/>-->
+           <class name="home.HomeTest"/>
+           <class name="home.TestSearch"/>
            <class name="home.MoreOnHomePageTest"/>
-<!--           <class name="signinsignup.SignInTest"/>-->
-<!--           <class name="signinsignup.SignUpPageTest"/>-->
-<!--           <class name="home.HomePageOptionsTest"/>-->
-<!--           <class name="home.PaymentProductOptionsTest"/>-->
-<!--           <class name="home.HelpOptionsTest"/>-->
-<!--           <class name="hamburgericon.PrimeOptionsUseTest"/>-->
-<!--           <class name="hamburgericon.EchoNAlexaUseTest"/>-->
-<!--           <class name="hamburgericon.KindleOptionsTest"/>-->
-<!--           <class name="shopping.ShoppingCartTest"/>-->
-<!--           <class name="search.SearchNSelectNBuyTest"/>-->
-<!--           <class name="search.MoreSearchTest"/>-->
+           <class name="signinsignup.SignInTest"/>
+           <class name="signinsignup.SignUpPageTest"/>
+           <class name="home.HomePageOptionsTest"/>
+           <class name="home.PaymentProductOptionsTest"/>
+           <class name="home.HelpOptionsTest"/>
+           <class name="hamburgericon.PrimeOptionsUseTest"/>
+           <class name="hamburgericon.EchoNAlexaUseTest"/>
+           <class name="hamburgericon.KindleOptionsTest"/>
+           <class name="shopping.ShoppingCartTest"/>
+           <class name="search.SearchNSelectNBuyTest"/>
+           <class name="search.MoreSearchTest"/>
       </classes>
     </test>
 </suite>

@@ -36,6 +36,11 @@ public class PaymentProductOptionsTest extends CommonAPI {
         paymentProductsOptions.canGoToCreditCardMarketplaceOption();
     }
     @Test
+    public void testUserCanNavigateToCreditCardPage(){
+        PaymentProductsOptions paymentProductsOptions = PageFactory.initElements(driver,PaymentProductsOptions.class);
+        paymentProductsOptions.canGoToCreditCardMarketplaceOption();
+    }
+    @Test
     public void testUserCanNavigateToReloadBalancePage(){
         PaymentProductsOptions paymentProductsOptions = PageFactory.initElements(driver,PaymentProductsOptions.class);
         paymentProductsOptions.canGoToReloadBalanceOption();

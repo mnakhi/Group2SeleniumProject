@@ -81,8 +81,7 @@ public class SignUpPage extends CommonAPI {
         reenterPasswordBox.sendKeys(password);
         createAccountBtn.click();
         sameEmailBtn.click();
-        Thread.sleep(5000);
-       Alert alert=driver.switchTo().alert();
+        Alert alert=driver.switchTo().alert();
         alert.dismiss();
 
     }

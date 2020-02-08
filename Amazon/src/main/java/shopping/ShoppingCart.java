@@ -35,7 +35,7 @@ public class ShoppingCart extends CommonAPI {
         useTodaysDealBtn();
         addToCartBtn.click();
         cartBtn.click();
-        String expected2 = "Amazon.com Shopping Cart";
-        Assert.assertEquals(driver.getTitle(),expected2);
+        String expected = "Amazon.com Shopping Cart";
+        Assert.assertEquals(driver.getTitle(),expected);
     }
 }

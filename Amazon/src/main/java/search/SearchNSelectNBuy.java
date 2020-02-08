@@ -42,7 +42,7 @@ public class SearchNSelectNBuy extends CommonAPI {
         signInBtn.click();
 
     }
-    public void s(){
+    public void buyItems(){
         searchNClick("book");
         mysteryLink.click();
         bookSpecification.click();
