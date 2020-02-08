@@ -17,6 +17,8 @@ public class MoreSearch extends CommonAPI {
     WebElement selectAppliances;
     @FindBy(css="option[value='search-alias=under-ten-dollars']")
     WebElement selectItemUnderTenDollars;
+    @FindBy(css="option[value='search-alias=pets']")
+    WebElement selectPetFood;
     @FindBy(id = "twotabsearchtextbox")
     WebElement searchBox;
     @FindBy(css = "input[class='nav-input']")
@@ -49,5 +51,10 @@ public class MoreSearch extends CommonAPI {
         searchBox.sendKeys(word);
         submitBtn.click();
     }
-
+    public void selectPetFoodOption(String word){
+        dropdownBtn.click();
+        selectItemUnderTenDollars.click();
+        selectPetFood.sendKeys(word);
+        submitBtn.click();
+    }
 }

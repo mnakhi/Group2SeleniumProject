@@ -53,10 +53,15 @@ public class MoreOnHomePage extends CommonAPI {
     WebElement watchListBtn;
     @FindBy(xpath = "//*[@id=\"navFooter\"]/div[4]/table/tbody/tr[9]/td[11]/a")
     WebElement dealsNShenanigansLink;
-
-    public void scrollByVisibleElement(){
+    @FindBy(xpath = "//*[@id=\"navFooter\"]/div[4]/table/tbody/tr[5]/td[7]/a")
+    WebElement digitalComicsLink;
+    public void scrollToDealsNShenanigans(){
         JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
         javascriptExecutor.executeScript("arguments[0].scrollIntoView();", dealsNShenanigansLink);
+    }
+    public void scrollToDigitalComics(){
+        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
+        javascriptExecutor.executeScript("arguments[0].scrollIntoView();", digitalComicsLink);
     }
 
     public void selectCreateAListFromMouseHover() {
