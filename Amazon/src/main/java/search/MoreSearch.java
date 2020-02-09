@@ -4,8 +4,6 @@ import common.CommonAPI;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import java.util.List;
-
 public class MoreSearch extends CommonAPI {
     @FindBy(id = "searchDropdownBox")
     WebElement dropdownBtn;
@@ -23,7 +21,6 @@ public class MoreSearch extends CommonAPI {
     WebElement searchBox;
     @FindBy(css = "input[class='nav-input']")
     WebElement submitBtn;
-    //Select departmentDropdown = new Select(dropdownBtn);
     public void navigateToAmazon() {
         driver.get("https://www.amazon.com/");
     }
