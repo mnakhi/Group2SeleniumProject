@@ -18,6 +18,7 @@
         <module>ParaBank</module>
         <module>Chase</module>
         <module>RestAssured</module>
+        <module>RestAssuredCNN</module>
     </modules>
 
     <dependencyManagement>

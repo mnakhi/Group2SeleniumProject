@@ -13,7 +13,6 @@
     <test name = "Employee Information Services">
         <classes>
             <class name="NewsAPI"/>
-            <class name="AllEmployeeAPI"/>
         </classes>
     </test>
 
